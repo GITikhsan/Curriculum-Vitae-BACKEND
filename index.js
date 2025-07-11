@@ -5,6 +5,7 @@ const { educationHistory, skills, projects } = require('./data');
 const app = express();
 const PORT = 3000;
 app.use(cors());
+app.use('/images', express.static('images'));
 
 app.use(express.json());
 app.get('/api/education', (req, res) => res.json(educationHistory));
